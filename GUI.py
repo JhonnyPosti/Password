@@ -33,10 +33,11 @@ while True:
         password = Creat_pass(8)
         organization = values["-org-"]
         login = values["-login-"]
+        file_checker = getTxt()
 
-        txtfile = open(path_folder + "\passwords.txt", "a+")
+        txtfile = open(path_folder + "\passwords.txt", file_checker)
 
-        with open(path_folder + "\passwords.txt" , "a") as f:
+        with open(path_folder + "\passwords.txt" , file_checker) as f:
             f.write("{orga}\nLogin: {logintxt} \nSenha: {senhatxt}\n \n".format(orga = organization, senhatxt = password, logintxt = login))
         sg.Popup('Nova senha gerada!', keep_on_top=True)
 
@@ -47,9 +48,9 @@ while True:
         organization = values["-org-"]
         login = values["-login-"]
 
-        txtfile = open(path_folder + "\passwords.txt", "a+")
+        txtfile = open(path_folder + "\passwords.txt", file_checker)
 
-        with open(path_folder + "\passwords.txt" , "a") as f:
+        with open(path_folder + "\passwords.txt" , file_checker) as f:
             f.write("{orga}\nLogin: {logintxt} \nSenha: {senhatxt}\n \n".format(orga = organization, senhatxt = password, logintxt = login))
         sg.Popup('Nova senha gerada!', keep_on_top=True)
 
@@ -59,9 +60,9 @@ while True:
         organization = values["-org-"]
         login = values["-login-"]
 
-        txtfile = open(path_folder + "\passwords.txt", "a+")
+        txtfile = open(path_folder + "\passwords.txt", file_checker)
 
-        with open(path_folder + "\passwords.txt" , "a") as f:
+        with open(path_folder + "\passwords.txt" , file_checker) as f:
             f.write("{orga}\nLogin: {logintxt} \nSenha: {senhatxt}\n \n".format(orga = organization, senhatxt = password, logintxt = login))
 
         sg.Popup('Nova senha gerada!', keep_on_top=True)

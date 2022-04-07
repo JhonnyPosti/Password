@@ -4,6 +4,13 @@ import os
 from time import sleep
 
 
+def getTxt():
+    file_exists = os.path.exists('password.txt')
+    if file_exists == True:
+        return 'a'
+    else:
+        return 'w'
+
 def getHost(): 
     user = os.getlogin()
     return user
